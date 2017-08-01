@@ -1,0 +1,78 @@
+C++ interview Question
+
+what is lamda function, give me an example
+
+can virtual function be inline?
+
+what is explicit inline function
+
+virtual constructor? why not
+cant delegated to any other object for creating an instance
+
+virtual destructor
+yes, should alway if you do inheritance and has at least v func
+
+diff bt copy copy constr and assign operator
+one new inst and the other just copy val to exist
+A(const A& the_other)
+A& operator =(const A& the_other){ }
+
+shallow copy and deep copy
+
+do I need to explicit to call destructor
+NO.
+
+when copy cstr called
+pass by v, return by val, construct by another obj, compiler need to temp obj
+
+conversion construct
+single arg
+
+conversion operator
+public meth for specific data conv
+operator double(){ return -val};
+...
+Boo obj;
+double i = Obj;
+
+can copy cstr accept obj not a ref?
+No. must be a const ref.  otherwise its error, because its not know how to copy yet.
+
+order of obj be destructed:
+first constructed, last destroyed. reversed order
+exaple array
+
+overload a destruct?
+NO. one for each class. never take parameter
+
+can throw excep in destruct?
+NO. stack unwinding ( stack fram popped)
+
+place new?
+char memory[100];
+void *place = memory;
+Fred *f  = new(place) Fred();
+//the place and f will be equal
+f->~Fred();
+
+derived class explicitly call base cstr's destructor?
+No. deriv call base destr first then ..., reversed order
+
+List x and List x()
+class and a func return a List obj
+
+can one cstr call another cstr of the class
+No ( maybe yes in new version)
+combine code with a init()?
+
+
+how to link a c++ prog to C function
+extern "C"
+extern 'C" int func(int*, Foo)
+turn off mangling
+
+operators cant overload:
+sizeof()   .  .*   .-> ::  ?: 
+
+
+
